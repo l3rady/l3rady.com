@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Brady &#187; JavaScript</title>
+	<atom:link href="http://l3rady.com/blog/category/code-and-snippets/javascript/feed/" rel="self" type="application/rss+xml" />
+	<link>http://l3rady.com</link>
+	<description>A moan, a groan, my life story and how me, a technically minded person just can&#039;t seem to fit in with anybody.</description>
+	<lastBuildDate>Mon, 10 Sep 2012 14:35:55 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.9.9</generator>
+	<item>
+		<title>Google Maps API Javascript V3 &#8211; Place Km/Mile radius/circle around point</title>
+		<link>http://l3rady.com/blog/2010/09/14/google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point</link>
+		<comments>http://l3rady.com/blog/2010/09/14/google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point/#comments</comments>
+		<pubDate>Tue, 14 Sep 2010 10:47:44 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=477</guid>
+		<description><![CDATA[So Google has released V3 of their Google Maps API and it appears that they have stripped out a number of useful functions that I&#8217;ve found myself using in V2. Apparently these functions have been stripped out to make a more lightweight and compact API for better performance for mobile devices. This is great but [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>So Google has released V3 of their Google Maps API and it appears that they have stripped out a number of useful functions that I&#8217;ve found myself using in V2. Apparently these functions have been stripped out to make a more lightweight and compact API for better performance for mobile devices. This is great but now you have to write your own function that Google has taken out.</p>
+<p>So would you like to draw a radius around on a point on a Google map? Well I do and I managed it in the V2 API using a Google function called distanceFrom() and some custom code but now that function has been stripped out in v3. Anyway I&#8217;ve rewritten my code to do this in the V3 API. Take a look: <a href="http://pastebin.com/DnLqzMZx" target="_blank">http://pastebin.com/DnLqzMZx</a></p>
+<p>This requires the Google Maps API and also the <a href="http://www.movable-type.co.uk/scripts/latlong.html" target="_blank">latlong JS script from Movable Type</a>. To use simply call the function drawCircle() sending your Google longitude and latitude cords and the mile radius. If you want to use Km then comment out or delete the bit of code highlighted.</p>
+<p>Oh and you can send some other variables too if you don’t like the default colours and settings.</p>
+<p>Example usage: <a href="http://l3rady.com/wp-content/uploads/2010/09/mapexample.html" target="_blank">http://l3rady.com/wp-content/uploads/2010/09/mapexample.html</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2010/09/14/google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Javascript Same Height Div&#8217;s Update</title>
+		<link>http://l3rady.com/blog/2008/08/14/javascript-same-height-divs-update/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=javascript-same-height-divs-update</link>
+		<comments>http://l3rady.com/blog/2008/08/14/javascript-same-height-divs-update/#comments</comments>
+		<pubDate>Thu, 14 Aug 2008 15:26:39 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=352</guid>
+		<description><![CDATA[A while back I posted a way of making same height div’s but came across an issue when padding was involved. Well I’ve modified my code to take into account padding. Now the obvious thing to do would be to be to check padding on a div and subtract it from the height, but it’s [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>A while back I posted a way of making same height div’s but came across an issue when padding was involved. Well I’ve modified my code to take into account padding. Now the obvious thing to do would be to be to check padding on a div and subtract it from the height, but it’s not that easy. You would have to check three things: padding, paddingTop and paddingBottom. For some reason when I was checking padding I couldn’t get a value from JavaScript, this had me really stumped but after a nights sleep I came up with a better and more simpler way of sorting the padding issue. This is to let the code run and let it re-height the div’s and let the padding mess things up then run the same thing again and check for height differences from last time we checked. Oooohhh look the height has gone up 10px from last time thanks to a padding of 5px on the div. Now we know there is 10px of padding lets remove it. Sorted!</p>
+<p>JavaScript Code:<br />
+[js]<br />
+function sameHeight(divs) // Bring in an array of your divs<br />
+{<br />
+var highest = 0;<br />
+var heighttu = 0;<br />
+for(i = 0; i < divs.length; i++) // Loop through the divs
+{
+// Check to see if this div is the highest?
+if(document.getElementById(divs[i]).offsetHeight > highest)<br />
+{<br />
+// Yes its the highest so set the highest value to this div&#8217;s height<br />
+highest = document.getElementById(divs[i]).offsetHeight;<br />
+}<br />
+}<br />
+// Loop through divs and set their hieght all the same<br />
+for(i = 0; i < divs.length; i++)
+{
+document.getElementById(divs[i]).style.height = highest+"px";
+}
+// now get offset hieght again and we may found we have gone higher this is because of padding
+if(document.getElementById(divs[0]).offsetHeight > highest)<br />
+{<br />
+// correct the height<br />
+highest = highest &#8211; (document.getElementById(divs[0]).offsetHeight &#8211; highest);<br />
+// Correct divs<br />
+for(i = 0; i < divs.length; i++)
+{
+document.getElementById(divs[i]).style.height = highest+&#8221;px&#8221;;
+}
+}
+}[/js]
+</p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2008/08/14/javascript-same-height-divs-update/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Javascript Same Height Div&#8217;s</title>
+		<link>http://l3rady.com/blog/2008/06/05/javascript-same-height-divs/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=javascript-same-height-divs</link>
+		<comments>http://l3rady.com/blog/2008/06/05/javascript-same-height-divs/#comments</comments>
+		<pubDate>Thu, 05 Jun 2008 10:50:25 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=90</guid>
+		<description><![CDATA[Recently I had to make some divs the same height. Usually I would just pad the bottom of a div with page breaks but I couldn’t do that this time round as the page content is dynamic and the height of the divs could change. First thing I did was look online for answers and [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Recently I had to make some divs the same height. Usually I would just pad the bottom of a div with page breaks but I couldn’t do that this time round as the page content is dynamic and the height of the divs could change.</p>
+<p>First thing I did was look online for answers and sure enough there were solutions but looking at them they seemed over complicated so I decided to write my own solution.</p>
+<p>Javascript Code:</p>
+<p>Update at: <a href="http://l3rady.com/2008/08/14/javascript-same-height-divs-update/">http://l3rady.com/2008/08/14/javascript-same-height-divs-update/</a></p>
+<p>Simply pass an array of your divs to the function. Easy peasy&#8230;.</p>
+<p>Just an extra word of warning&#8230; Be aware of using padding on the blocks you pass to this function. If the paddings are different in each block then they may not end up being the same height. Although you could modify the function to check for the use of padding and alter the heights accordingly.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2008/06/05/javascript-same-height-divs/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 283/291 objects using disk
+
+ Served from: l3rady.com @ 2015-12-30 23:30:02 by W3 Total Cache -->

@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="distribution" content="global"/>
+<meta name="robots" content="follow, all"/>
+<meta name="language" content="en"/>
+<title>
+Brady &raquo; WordPress &#8211; Show images attached to post or page in order</title>
+<meta name="generator" content="WordPress 3.9.9"/>
+ 
+<link rel="shortcut icon" href="http://l3rady.com/blog/2010/10/25/wordpress-show-images-attached-to-post-or-page-in-order/wp-content/favicon.ico" type="image/x-icon"/>
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="feed/rss/index.html"/>
+<link rel="alternate" type="text/xml" title="RSS .92" href="feed/rss/index.html"/>
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="feed/atom/index.html"/>
+<link rel="pingback" href="xmlrpc.php"/>
+<link rel='archives' title='March 2011' href='blog/2011/03/index.html'/>
+<link rel='archives' title='January 2011' href='blog/2011/01/index.html'/>
+<link rel='archives' title='October 2010' href='blog/2010/10/index.html'/>
+<link rel='archives' title='September 2010' href='blog/2010/09/index.html'/>
+<link rel='archives' title='October 2009' href='blog/2009/10/index.html'/>
+<link rel='archives' title='September 2009' href='blog/2009/09/index.html'/>
+<link rel='archives' title='February 2009' href='blog/2009/02/index.html'/>
+<link rel='archives' title='October 2008' href='blog/2008/10/index.html'/>
+<link rel='archives' title='September 2008' href='blog/2008/09/index.html'/>
+<link rel='archives' title='August 2008' href='blog/2008/08/index.html'/>
+<link rel='archives' title='June 2008' href='blog/2008/06/index.html'/>
+<link rel='archives' title='May 2008' href='blog/2008/05/index.html'/>
+<link rel='archives' title='February 2008' href='blog/2008/02/index.html'/>
+<script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.5 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-25211555-1']);
+				            _gaq.push(['_setCustomVar',2,'post_type','post',3],['_setCustomVar',3,'author','brady',3],['_setCustomVar',4,'year','2010',3],['_setCustomVar',5,'category','php',3],['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+<link rel="alternate" type="application/rss+xml" title="Brady &raquo; WordPress &#8211; Show images attached to post or page in order Comments Feed" href="blog/2010/10/25/wordpress-show-images-attached-to-post-or-page-in-order/feed/index.html"/>
+<link rel='stylesheet' id='mt-shcore-style-css' href='wp-content/plugins/syntax-highlighter-mt/styles/shCore.css%3Fver=2.2.4.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='mt-theme-style-css' href='wp-content/plugins/syntax-highlighter-mt/styles/shThemeDefault.css%3Fver=2.2.4.css' type='text/css' media='all'/>
+<script type='text/javascript' src='wp-content/plugins/syntax-highlighter-mt/scripts/shCore.js%3Fver=2.2.4'></script>
+<script type='text/javascript' src='wp-content/plugins/syntax-highlighter-mt/scripts/shAutoloader.js%3Fver=2.2.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js%3Fver=1.11.0'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js%3Fver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php%3Frsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml"/>
+<link rel='prev' title='CSS/HTML &#8211; Margin goes/pushes out container block/div' href='index.html%3Fp=488.html'/>
+<link rel='next' title='Mathmatically proven that women equals problems' href='index.html%3Fp=508.html'/>
+<meta name="generator" content="WordPress 3.9.9"/>
+<link rel='canonical' href='index.html%3Fp=499.html'/>
+<link rel='shortlink' href='index.html%3Fp=499.html'/>
+<link rel="StyleSheet" href="wp-content/themes/alphaready/style/resetCSS.css" type="text/css"/>
+<link rel="StyleSheet" href="wp-content/themes/alphaready/style/alpha.css" type="text/css"/>
+<!--[if lte IE 7.0]><link type="text/css" rel="stylesheet" href="/wp-content/themes/alphaready/style/alphaie7.css" /><![endif]-->
+<!--[if lte IE 6.0]><link type="text/css" rel="stylesheet" href="/wp-content/themes/alphaready/style/alphaie6.css" /><![endif]-->
+</head>
+<body><script type="text/javascript">
+//<![CDATA[
+try{(function(a){var b="http://",c="l3rady.com",d="/cdn-cgi/cl/",e="img.gif",f=new a;f.src=[b,c,d,e].join("")})(Image)}catch(e){}
+//]]>
+</script>
+<div id="container">
+<a href="index.html"><img src="wp-content/themes/alphaready/images/headerlogo.jpg" alt="Brady" title="Brady" border="0"/></a>
+<div id="header-container">
+<div id="slogan"><img src="wp-content/themes/alphaready/images/slogan.png" alt="A moan, a groan, my life story and how me, a technically minded person just can&#039;t seem to fit in with anybody." title="A moan, a groan, my life story and how me, a technically minded person just can&#039;t seem to fit in with anybody."/></div>
+<div id="nav-container">
+<ul id="navigation">
+<li class='home' id='selected'><a href="index.html">HOME</a></li>
+<li class='about'><a href="about-me.html">ABOUT ME</a></li>
+<li class='webmail'><a href="http://webmail.alphaready.com">WEBMAIL</a></li>
+<li class='sms'><a href="http://sms.alphaready.com">SMS GATEWAY</a></li>
+<li class='proxy'><a href="http://proxy.alphaready.com">PROXY</a></li>
+</ul>
+<a href="cigarette.php.html"> </a>
+</div>
+</div>
+<div id="content"> <div id="sidebar">
+<ul id="ulside">
+<li><h2 id="side01">ARCHIVES</h2>
+<ul>
+<li><a href='blog/2011/03/index.html'>March 2011</a></li>
+<li><a href='blog/2011/01/index.html'>January 2011</a></li>
+<li><a href='blog/2010/10/index.html'>October 2010</a></li>
+<li><a href='blog/2010/09/index.html'>September 2010</a></li>
+<li><a href='blog/2009/10/index.html'>October 2009</a></li>
+<li><a href='blog/2009/09/index.html'>September 2009</a></li>
+<li><a href='blog/2009/02/index.html'>February 2009</a></li>
+<li><a href='blog/2008/10/index.html'>October 2008</a></li>
+<li><a href='blog/2008/09/index.html'>September 2008</a></li>
+<li><a href='blog/2008/08/index.html'>August 2008</a></li>
+<li><a href='blog/2008/06/index.html'>June 2008</a></li>
+<li><a href='blog/2008/05/index.html'>May 2008</a></li>
+<li><a href='blog/2008/02/index.html'>February 2008</a></li>
+</ul>
+</li>
+<li><h2 id="side02">CATEGORIES</h2>
+<ul>
+<li class="cat-item cat-item-8"><a href="blog/category/code-and-snippets/index.html" title="View all posts filed under Code and Snippets">Code and Snippets</a> (14)
+<ul class='children'>
+<li class="cat-item cat-item-18"><a href="blog/category/code-and-snippets/css/index.html" title="View all posts filed under CSS">CSS</a> (1)
+</li>
+<li class="cat-item cat-item-10"><a href="blog/category/code-and-snippets/html/index.html" title="View all posts filed under HTML">HTML</a> (3)
+</li>
+<li class="cat-item cat-item-11"><a href="blog/category/code-and-snippets/javascript/index.html" title="View all posts filed under JavaScript">JavaScript</a> (3)
+</li>
+<li class="cat-item cat-item-9"><a href="blog/category/code-and-snippets/php/index.html" title="View all posts filed under PHP">PHP</a> (8)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-16"><a href="blog/category/how-to/index.html" title="View all posts filed under How to">How to</a> (1)
+</li>
+<li class="cat-item cat-item-6"><a href="blog/category/inner-geek/index.html" title="Don&#039;t enter here if you want some lite reading. This place is purly my inner geek talking.">Inner Geek</a> (4)
+</li>
+<li class="cat-item cat-item-14"><a href="blog/category/software/index.html" title="View all posts filed under Software">Software</a> (2)
+</li>
+</ul>
+</li>
+<li><h2 id="side03">META</h2>
+<ul>
+<li><a href="http://feeds.feedburner.com/l3rady/WyQw" title="Syndicate this site using RSS"><abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="wp-login.php.html">Log in</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="main-content">
+<div class="entry">
+ 
+<h3 class="entrytitle" id="post-499"><a href="index.html%3Fp=499.html" rel="bookmark">WordPress &#8211; Show images attached to post or page in order</a></h3>
+<div class="entrymeta">October 25th 2010 | Posted to <a href="blog/category/code-and-snippets/php/index.html" title="View all posts in PHP" rel="category tag">PHP</a> </div>
+<div class="entrybody"><p>I&#8217;m currently building a website where a custom post type needs to show a gallery of images per post. Below image is what I was after:</p>
+<p><a href="wp-content/uploads/2010/10/property-gallery.jpg"><img src="wp-content/uploads/2010/10/property-gallery.jpg" alt="" title="property-gallery" width="535" height="256" class="alignnone size-full wp-image-500"/></a></p>
+<p>To do this I would upload the images when creating the post so that the images would be attached to the post, or in other words the attachments where child posts of this post I was creating. I found some code that grabs the attachments but the code didn&#8217;t retrieve the results by the order I have specified in the upload manager when uploading the image. To get the images in order I had to write a little more code to what I had found.</p>
+<p>Anyway here is the finished code <a href="http://pastebin.com/wEvW0WHZ" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://pastebin.com']);" target="_blank">http://pastebin.com/wEvW0WHZ</a>. It&#8217;s tailored to my needs but here you can see how the image attachments are being pulled and then how im sorting the results to go in the correct order. Hope it is some use to someone.</p>
+<p class="comments_link">
+<a href="index.html%3Fp=499.html#respond" title="Comment on WordPress &#8211; Show images attached to post or page in order"><span class="dsq-postid" rel="499 http://l3rady.com/?p=499"><img src="wp-content/themes/alphaready/images/comments.gif" title="comments" alt="*"/> Comments(0)</span></a> </p>
+</div>
+ 
+</div>
+<div id="disqus_thread">
+</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://l3rady.com/blog/2010/10/25/wordpress-show-images-attached-to-post-or-page-in-order/';
+    var disqus_identifier = '499 http://l3rady.com/?p=499';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'l3rady';
+    var disqus_title = "WordPress &#8211; Show images attached to post or page in order";
+    var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /* Add the ability to add javascript callbacks */
+        
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=499';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/l3rady.com\/blog\/2010\/10\/25\/wordpress-show-images-attached-to-post-or-page-in-order\/trackback\/"    };
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/' + 'embed' + '.js' + '?pname=wordpress&pver=2.77';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+<div class="entryother"></div>
+</div>
+<br style="clear:both"/>
+ 
+</div>
+</div>
+<div id="footer">
+<p><a href="http://www.alphaready.com"><img src="wp-content/themes/alphaready/images/ARfooter.jpg" alt="Alpha Ready" title="AlphavReady" border="0"/></a></p>
+<p>Copyright &copy; 2008-2015 <a href="http://www.alphaready.com">Alpha Ready Ltd</a>. All rights reserved.</p>
+</div>
+<script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'l3rady';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) url = url[0];
+                    else url = url[1]
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var MTBrushParams = {"baseUrl":"http:\/\/l3rady.com\/wp-content\/plugins\/syntax-highlighter-mt"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/syntax-highlighter-mt/brushTypes.js%3Fver=2.2.4'></script>
+</body>
+</html>
+ 

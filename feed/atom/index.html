@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?><feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en-US"
+  xml:base="http://l3rady.com/wp-atom.php"
+   >
+	<title type="text">Brady</title>
+	<subtitle type="text">A moan, a groan, my life story and how me, a technically minded person just can&#039;t seem to fit in with anybody.</subtitle>
+
+	<updated>2012-09-10T14:35:55Z</updated>
+
+	<link rel="alternate" type="text/html" href="http://l3rady.com" />
+	<id>http://l3rady.com/feed/atom/</id>
+	<link rel="self" type="application/atom+xml" href="http://l3rady.com/feed/atom/" />
+
+	<generator uri="http://wordpress.org/" version="3.9.9">WordPress</generator>
+	<entry>
+		<author>
+			<name>Brady</name>
+						<uri>http://www.l3rady.com</uri>
+					</author>
+		<title type="html"><![CDATA[Remove/edit WordPress admin footer links and version number]]></title>
+		<link rel="alternate" type="text/html" href="http://l3rady.com/blog/2011/03/24/removeedit-wordpress-admin-footer-links-and-version-number/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=removeedit-wordpress-admin-footer-links-and-version-number" />
+		<id>http://l3rady.com/?p=530</id>
+		<updated>2012-02-14T09:48:00Z</updated>
+		<published>2011-03-24T11:38:46Z</published>
+		<category scheme="http://l3rady.com" term="PHP" />		<summary type="html"><![CDATA[function change_footer_admin () {return '&#38;nbsp;';} add_filter('admin_footer_text', 'change_footer_admin', 9999); function change_footer_version() {return ' ';} add_filter( 'update_footer', 'change_footer_version', 9999); Place the above code in your themes function file. The above code allows you to edit the admin footer version number and text links. Just alter the html in the return of each function. I recommend removing the version [&#8230;]]]></summary>
+		<content type="html" xml:base="http://l3rady.com/blog/2011/03/24/removeedit-wordpress-admin-footer-links-and-version-number/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=removeedit-wordpress-admin-footer-links-and-version-number"><![CDATA[<pre class="brush:php">function change_footer_admin () {return '&amp;nbsp;';}
+add_filter('admin_footer_text', 'change_footer_admin', 9999);
+function change_footer_version() {return ' ';}
+add_filter( 'update_footer', 'change_footer_version', 9999);</pre>
+<p>Place the above code in your themes function file. The above code allows you to edit the admin footer version number and text links. Just alter the html in the return of each function. I recommend removing the version number for security reasons. There are a lot of tutorials out there that tell you how to remove the generator tag from your WordPress header to hide the version number put they forget if a user registers they can see the version number in the admin footer page. If you build WordPress installations for your clients this footer area is good for displaying your own support links etc.</p>
+]]></content>
+			<link rel="replies" type="text/html" href="http://l3rady.com/blog/2011/03/24/removeedit-wordpress-admin-footer-links-and-version-number/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=removeedit-wordpress-admin-footer-links-and-version-number#comments" thr:count="3"/>
+		<link rel="replies" type="application/atom+xml" href="http://l3rady.com/blog/2011/03/24/removeedit-wordpress-admin-footer-links-and-version-number/feed/atom/" thr:count="3"/>
+		<thr:total>3</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Brady</name>
+						<uri>http://www.l3rady.com</uri>
+					</author>
+		<title type="html"><![CDATA[How to stop Skype replacing telephone numbers on your web design]]></title>
+		<link rel="alternate" type="text/html" href="http://l3rady.com/blog/2011/01/21/how-to-stop-skype-replacing-telephone-numbers-on-your-web-design/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-to-stop-skype-replacing-telephone-numbers-on-your-web-design" />
+		<id>http://l3rady.com/?p=523</id>
+		<updated>2012-02-14T09:49:01Z</updated>
+		<published>2011-01-21T15:07:15Z</published>
+		<category scheme="http://l3rady.com" term="CSS" /><category scheme="http://l3rady.com" term="HTML" />		<summary type="html"><![CDATA[When a user installs Skype it auto installs some plugins to Internet Explorer and Firefox, that when it sees a telephone number on the webpage a user is viewing it will replace the number and surround it in its own formatting. Now a user can disable this function but as a web designer/developer you cannot [&#8230;]]]></summary>
+		<content type="html" xml:base="http://l3rady.com/blog/2011/01/21/how-to-stop-skype-replacing-telephone-numbers-on-your-web-design/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-to-stop-skype-replacing-telephone-numbers-on-your-web-design"><![CDATA[<p>When a user installs Skype it auto installs some plugins to Internet Explorer and Firefox, that when it sees a telephone number on the webpage a user is viewing it will replace the number and surround it in its own formatting. Now a user can disable this function but as a web designer/developer you cannot guarantee that all your website visitors have it disabled. For those users that don’t have it disabled a nicely designed and placed telephone number in your design is replaced with an ugly and out-of-place number. Yuk! I did some searching and all the posts I could find only said how to disabled the plugin which I didn’t want. I want to disable the plugin or disable the effects of the plugin for all browsers viewing the site I was developing.</p>
+<p>I then came across this code:</p>
+<pre class="brush:html">&lt;meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" /&gt;</pre>
+<p>Put looks like Skype has updated and this code no longer works. For all my web design work I always work with a reset.css style sheet that is like my common settings for CSS that I use in all web development. Well I stumbled across some CSS you can use to hide the effects of the Skype plugin. Here is the nice bit of CSS code that has found its way into my reset.css style sheet:</p>
+<pre class="brush:css">/**** GET LOST SKYPE! ****/
+span.skype_pnh_container {display:none !important;}
+span.skype_pnh_print_container {display:inline !important;}</pre>
+<p>Hope it helps you out</p>
+]]></content>
+			<link rel="replies" type="text/html" href="http://l3rady.com/blog/2011/01/21/how-to-stop-skype-replacing-telephone-numbers-on-your-web-design/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-to-stop-skype-replacing-telephone-numbers-on-your-web-design#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://l3rady.com/blog/2011/01/21/how-to-stop-skype-replacing-telephone-numbers-on-your-web-design/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Brady</name>
+						<uri>http://www.l3rady.com</uri>
+					</author>
+		<title type="html"><![CDATA[Mathmatically proven that women equals problems]]></title>
+		<link rel="alternate" type="text/html" href="http://l3rady.com/blog/2011/01/08/mathmatically-proven-that-women-equals-problems/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=mathmatically-proven-that-women-equals-problems" />
+		<id>http://l3rady.com/?p=508</id>
+		<updated>2011-01-08T14:17:14Z</updated>
+		<published>2011-01-08T14:17:14Z</published>
+		<category scheme="http://l3rady.com" term="Inner Geek" />		<summary type="html"><![CDATA[In school you always get tought that anything that can be proven by mathmatics must be true. Well here is some simple secondary school mathmatics that proves that women are equal to problems. All men know that to get a woman you need time and money: But over time we know we make money, so [&#8230;]]]></summary>
+		<content type="html" xml:base="http://l3rady.com/blog/2011/01/08/mathmatically-proven-that-women-equals-problems/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=mathmatically-proven-that-women-equals-problems"><![CDATA[<p>In school you always get tought that anything that can be proven by mathmatics must be true. Well here is some simple secondary school mathmatics that proves that women are equal to problems.</p>
+<p>All men know that to get a woman you need time and money:<br />
+<img src="http://l3rady.com/wp-content/uploads/2011/01/womaneqtimxmon.gif" alt="" title="womaneqtimxmon" width="335" height="64" class="alignnone size-full wp-image-513" /></p>
+<p>But over time we know we make money, so time is equal to money:<br />
+<img src="http://l3rady.com/wp-content/uploads/2011/01/timeeqmon.gif" alt="" title="timeeqmon" width="335" height="73" class="alignnone size-full wp-image-510" /></p>
+<p>So from that we can safely say that a woman equals money times money or better put woman equals money squared:<br />
+<img src="http://l3rady.com/wp-content/uploads/2011/01/womaneqmonsquar.gif" alt="" title="womaneqmonsquar" width="335" height="92" class="alignnone size-full wp-image-511" /></p>
+<p>However money is the root of all problems?<br />
+<img src="http://l3rady.com/wp-content/uploads/2011/01/moneyeqsqurootprob.gif" alt="" title="moneyeqsqurootprob" width="335" height="59" class="alignnone size-full wp-image-509" /></p>
+<p>So we can replace money with root problems. In maths you should know that root and squared cancel each other out so you are left with woman equals problems:<br />
+<img src="http://l3rady.com/wp-content/uploads/2011/01/womaneqprobs.gif" alt="" title="womaneqprobs" width="335" height="138" class="alignnone size-full wp-image-512" /></p>
+<p>So there we have it WOMEN = PROBLEMS!!</p>
+]]></content>
+			<link rel="replies" type="text/html" href="http://l3rady.com/blog/2011/01/08/mathmatically-proven-that-women-equals-problems/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=mathmatically-proven-that-women-equals-problems#comments" thr:count="1"/>
+		<link rel="replies" type="application/atom+xml" href="http://l3rady.com/blog/2011/01/08/mathmatically-proven-that-women-equals-problems/feed/atom/" thr:count="1"/>
+		<thr:total>1</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Brady</name>
+						<uri>http://www.l3rady.com</uri>
+					</author>
+		<title type="html"><![CDATA[WordPress &#8211; Show images attached to post or page in order]]></title>
+		<link rel="alternate" type="text/html" href="http://l3rady.com/blog/2010/10/25/wordpress-show-images-attached-to-post-or-page-in-order/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=wordpress-show-images-attached-to-post-or-page-in-order" />
+		<id>http://l3rady.com/?p=499</id>
+		<updated>2010-10-25T16:32:32Z</updated>
+		<published>2010-10-25T16:32:32Z</published>
+		<category scheme="http://l3rady.com" term="PHP" />		<summary type="html"><![CDATA[I&#8217;m currently building a website where a custom post type needs to show a gallery of images per post. Below image is what I was after: To do this I would upload the images when creating the post so that the images would be attached to the post, or in other words the attachments where [&#8230;]]]></summary>
+		<content type="html" xml:base="http://l3rady.com/blog/2010/10/25/wordpress-show-images-attached-to-post-or-page-in-order/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=wordpress-show-images-attached-to-post-or-page-in-order"><![CDATA[<p>I&#8217;m currently building a website where a custom post type needs to show a gallery of images per post. Below image is what I was after:</p>
+<p><a href="http://l3rady.com/wp-content/uploads/2010/10/property-gallery.jpg"><img src="http://l3rady.com/wp-content/uploads/2010/10/property-gallery.jpg" alt="" title="property-gallery" width="535" height="256" class="alignnone size-full wp-image-500" /></a></p>
+<p>To do this I would upload the images when creating the post so that the images would be attached to the post, or in other words the attachments where child posts of this post I was creating. I found some code that grabs the attachments but the code didn&#8217;t retrieve the results by the order I have specified in the upload manager when uploading the image. To get the images in order I had to write a little more code to what I had found.</p>
+<p>Anyway here is the finished code <a href="http://pastebin.com/wEvW0WHZ" target="_blank">http://pastebin.com/wEvW0WHZ</a>. It&#8217;s tailored to my needs but here you can see how the image attachments are being pulled and then how im sorting the results to go in the correct order. Hope it is some use to someone.</p>
+]]></content>
+			<link rel="replies" type="text/html" href="http://l3rady.com/blog/2010/10/25/wordpress-show-images-attached-to-post-or-page-in-order/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=wordpress-show-images-attached-to-post-or-page-in-order#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://l3rady.com/blog/2010/10/25/wordpress-show-images-attached-to-post-or-page-in-order/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Brady</name>
+						<uri>http://www.l3rady.com</uri>
+					</author>
+		<title type="html"><![CDATA[CSS/HTML &#8211; Margin goes/pushes out container block/div]]></title>
+		<link rel="alternate" type="text/html" href="http://l3rady.com/blog/2010/09/30/csshtml-margin-goespushes-out-container-blockdiv/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=csshtml-margin-goespushes-out-container-blockdiv" />
+		<id>http://l3rady.com/?p=488</id>
+		<updated>2010-09-30T15:24:42Z</updated>
+		<published>2010-09-30T15:22:05Z</published>
+		<category scheme="http://l3rady.com" term="HTML" />		<summary type="html"><![CDATA[I recently encountered this issue: Where the margin on the H1 tag was overflowing into the container above and pushing down the H1 tag&#8217;s container. I couldnt figure out why. Here is an example: http://l3rady.com/wp-content/uploads/2010/09/marginout.html To my logic the green should be flush against the top and a 10px gap between the red and green. [&#8230;]]]></summary>
+		<content type="html" xml:base="http://l3rady.com/blog/2010/09/30/csshtml-margin-goespushes-out-container-blockdiv/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=csshtml-margin-goespushes-out-container-blockdiv"><![CDATA[<p>I recently encountered this issue:</p>
+<p><img src="http://l3rady.com/wp-content/uploads/2010/09/marginout.png" alt="Margin Pushing Out" /></p>
+<p>Where the margin on the H1 tag was overflowing into the container above and pushing down the H1 tag&#8217;s container. I couldnt figure out why. Here is an example:</p>
+<p><a href="http://l3rady.com/wp-content/uploads/2010/09/marginout.html">http://l3rady.com/wp-content/uploads/2010/09/marginout.html</a></p>
+<p>To my logic the green should be flush against the top and a 10px gap between the red and green. After some digging around I found out the reason this is happening is due to the way <a href="http://www.w3.org/TR/CSS2/visuren.html#block-formatting">block formatting works</a>. To fix this just add overflow:hidden; to the H1 tag&#8217;s container. Fixed here:</p>
+<p><a href="http://l3rady.com/wp-content/uploads/2010/09/marginfixed.html">http://l3rady.com/wp-content/uploads/2010/09/marginfixed.html</a></p>
+]]></content>
+			<link rel="replies" type="text/html" href="http://l3rady.com/blog/2010/09/30/csshtml-margin-goespushes-out-container-blockdiv/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=csshtml-margin-goespushes-out-container-blockdiv#comments" thr:count="1"/>
+		<link rel="replies" type="application/atom+xml" href="http://l3rady.com/blog/2010/09/30/csshtml-margin-goespushes-out-container-blockdiv/feed/atom/" thr:count="1"/>
+		<thr:total>1</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Brady</name>
+						<uri>http://www.l3rady.com</uri>
+					</author>
+		<title type="html"><![CDATA[PHP Send Email With High Importance Set]]></title>
+		<link rel="alternate" type="text/html" href="http://l3rady.com/blog/2010/09/29/php-send-email-with-high-importance-set/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=php-send-email-with-high-importance-set" />
+		<id>http://l3rady.com/?p=481</id>
+		<updated>2010-09-29T16:50:35Z</updated>
+		<published>2010-09-29T16:50:25Z</published>
+		<category scheme="http://l3rady.com" term="PHP" />		<summary type="html"><![CDATA[Just posting this for reference really. You need to add some extra headers to your PHP send mail script to send the email with high importance. This will show a red exclamation mark on the recipitents recieved mail if their mail client supports this feature. http://pastebin.com/UamEcsu7]]></summary>
+		<content type="html" xml:base="http://l3rady.com/blog/2010/09/29/php-send-email-with-high-importance-set/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=php-send-email-with-high-importance-set"><![CDATA[<p>Just posting this for reference really. You need to add some extra headers to your PHP send mail script to send the email with high importance. This will show a red exclamation mark on the recipitents recieved mail if their mail client supports this feature.</p>
+<p><a href="http://pastebin.com/UamEcsu7" target="_blank">http://pastebin.com/UamEcsu7</a></p>
+]]></content>
+			<link rel="replies" type="text/html" href="http://l3rady.com/blog/2010/09/29/php-send-email-with-high-importance-set/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=php-send-email-with-high-importance-set#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://l3rady.com/blog/2010/09/29/php-send-email-with-high-importance-set/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Brady</name>
+						<uri>http://www.l3rady.com</uri>
+					</author>
+		<title type="html"><![CDATA[Google Maps API Javascript V3 &#8211; Place Km/Mile radius/circle around point]]></title>
+		<link rel="alternate" type="text/html" href="http://l3rady.com/blog/2010/09/14/google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point" />
+		<id>http://l3rady.com/?p=477</id>
+		<updated>2010-09-30T09:12:45Z</updated>
+		<published>2010-09-14T10:47:44Z</published>
+		<category scheme="http://l3rady.com" term="JavaScript" />		<summary type="html"><![CDATA[So Google has released V3 of their Google Maps API and it appears that they have stripped out a number of useful functions that I&#8217;ve found myself using in V2. Apparently these functions have been stripped out to make a more lightweight and compact API for better performance for mobile devices. This is great but [&#8230;]]]></summary>
+		<content type="html" xml:base="http://l3rady.com/blog/2010/09/14/google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point"><![CDATA[<p>So Google has released V3 of their Google Maps API and it appears that they have stripped out a number of useful functions that I&#8217;ve found myself using in V2. Apparently these functions have been stripped out to make a more lightweight and compact API for better performance for mobile devices. This is great but now you have to write your own function that Google has taken out.</p>
+<p>So would you like to draw a radius around on a point on a Google map? Well I do and I managed it in the V2 API using a Google function called distanceFrom() and some custom code but now that function has been stripped out in v3. Anyway I&#8217;ve rewritten my code to do this in the V3 API. Take a look: <a href="http://pastebin.com/DnLqzMZx" target="_blank">http://pastebin.com/DnLqzMZx</a></p>
+<p>This requires the Google Maps API and also the <a href="http://www.movable-type.co.uk/scripts/latlong.html" target="_blank">latlong JS script from Movable Type</a>. To use simply call the function drawCircle() sending your Google longitude and latitude cords and the mile radius. If you want to use Km then comment out or delete the bit of code highlighted.</p>
+<p>Oh and you can send some other variables too if you don’t like the default colours and settings.</p>
+<p>Example usage: <a href="http://l3rady.com/wp-content/uploads/2010/09/mapexample.html" target="_blank">http://l3rady.com/wp-content/uploads/2010/09/mapexample.html</a></p>
+]]></content>
+			<link rel="replies" type="text/html" href="http://l3rady.com/blog/2010/09/14/google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://l3rady.com/blog/2010/09/14/google-maps-api-javascript-v3-place-kmmile-radiuscircle-around-point/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Brady</name>
+						<uri>http://www.l3rady.com</uri>
+					</author>
+		<title type="html"><![CDATA[How to recieve and send MSN, Hotmail, Live email on android phone]]></title>
+		<link rel="alternate" type="text/html" href="http://l3rady.com/blog/2010/09/04/how-to-recieve-and-send-msn-hotmail-live-email-on-android-phone/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-to-recieve-and-send-msn-hotmail-live-email-on-android-phone" />
+		<id>http://l3rady.com/?p=473</id>
+		<updated>2010-09-04T15:36:59Z</updated>
+		<published>2010-09-04T15:36:59Z</published>
+		<category scheme="http://l3rady.com" term="How to" />		<summary type="html"><![CDATA[I thought I&#8217;d just share these settings, as I have found they are impossible to find. Also I will point out that this is POP3 and SMTP settings and not IMAP. Correct me if I&#8217;m wrong but you have to pay for IMAP access, and I think thats why these settings are hard to find&#8230; [&#8230;]]]></summary>
+		<content type="html" xml:base="http://l3rady.com/blog/2010/09/04/how-to-recieve-and-send-msn-hotmail-live-email-on-android-phone/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-to-recieve-and-send-msn-hotmail-live-email-on-android-phone"><![CDATA[<p>I thought I&#8217;d just share these settings, as I have found they are impossible to find. Also I will point out that this is POP3 and SMTP settings and not IMAP. Correct me if I&#8217;m wrong but you have to pay for IMAP access, and I think thats why these settings are hard to find&#8230; Why tell you how to connect for free when they want you to pay. Another great thing with these settings I have found they work on ISP&#8217;s and mobile networks that normally block port 25. So here they are:</p>
+<p>Incoming Settings:<br />
+Username: <a href="mailto:example@msn.com">example@msn.com</a> (use your full email address)<br />
+Password: ********<br />
+POP3 Server: pop3.live.com<br />
+Port: 995<br />
+Security Type: SSL</p>
+<p>Outgoing Settings:<br />
+SMTP Server: smtp.live.com<br />
+Port: 587<br />
+Security Type: TLS<br />
+Require Sign-in: yes<br />
+Username: <a href="mailto:example@msn.com">example@msn.com</a> (use your full email address)<br />
+Password: ********</p>
+<p>So there we go. Also these settings will work on other email clients not just android phones.</p>
+]]></content>
+			<link rel="replies" type="text/html" href="http://l3rady.com/blog/2010/09/04/how-to-recieve-and-send-msn-hotmail-live-email-on-android-phone/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-to-recieve-and-send-msn-hotmail-live-email-on-android-phone#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://l3rady.com/blog/2010/09/04/how-to-recieve-and-send-msn-hotmail-live-email-on-android-phone/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Brady</name>
+						<uri>http://www.l3rady.com</uri>
+					</author>
+		<title type="html"><![CDATA[CSS Dotted/Dashed HR Style]]></title>
+		<link rel="alternate" type="text/html" href="http://l3rady.com/blog/2009/10/13/css-dotteddashed-hr-style/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=css-dotteddashed-hr-style" />
+		<id>http://l3rady.com/?p=446</id>
+		<updated>2009-10-13T16:35:50Z</updated>
+		<published>2009-10-13T16:35:50Z</published>
+		<category scheme="http://l3rady.com" term="HTML" />		<summary type="html"><![CDATA[Ever had problems styling an HR element to be dotted or dashed and look correct in all browsers? Well here is a simple solution for you: [CSS] hr.{ background-color:#fff; border:#000 1px dotted; border-style: none none dotted; color:#fff; } [/CSS]]]></summary>
+		<content type="html" xml:base="http://l3rady.com/blog/2009/10/13/css-dotteddashed-hr-style/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=css-dotteddashed-hr-style"><![CDATA[<p>Ever had problems styling an HR element to be dotted or dashed and look correct in all browsers?</p>
+<p>Well here is a simple solution for you:</p>
+<p>[CSS]<br />
+hr.{<br />
+	background-color:#fff;<br />
+	border:#000 1px dotted;<br />
+	border-style: none none dotted;<br />
+	color:#fff;<br />
+}<br />
+[/CSS]</p>
+]]></content>
+			<link rel="replies" type="text/html" href="http://l3rady.com/blog/2009/10/13/css-dotteddashed-hr-style/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=css-dotteddashed-hr-style#comments" thr:count="1"/>
+		<link rel="replies" type="application/atom+xml" href="http://l3rady.com/blog/2009/10/13/css-dotteddashed-hr-style/feed/atom/" thr:count="1"/>
+		<thr:total>1</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Brady</name>
+						<uri>http://www.l3rady.com</uri>
+					</author>
+		<title type="html"><![CDATA[Microsoft Exchange/Outlook &#8211; Mail won&#8217;t leave outbox (won&#8217;t send)]]></title>
+		<link rel="alternate" type="text/html" href="http://l3rady.com/blog/2009/09/18/microsoft-exchangeoutlook-mail-wont-leave-outbox-wont-send/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=microsoft-exchangeoutlook-mail-wont-leave-outbox-wont-send" />
+		<id>http://l3rady.com/?p=442</id>
+		<updated>2009-09-18T14:52:07Z</updated>
+		<published>2009-09-18T14:52:07Z</published>
+		<category scheme="http://l3rady.com" term="Software" />		<summary type="html"><![CDATA[As of lately we have had a few users where they compose a message in outlook and when they hit send the message goes to their outbox to send but it remains there and nothing you do will release it. However when the user logs into Outlook Web Access the message sends perfectly fine. This [&#8230;]]]></summary>
+		<content type="html" xml:base="http://l3rady.com/blog/2009/09/18/microsoft-exchangeoutlook-mail-wont-leave-outbox-wont-send/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=microsoft-exchangeoutlook-mail-wont-leave-outbox-wont-send"><![CDATA[<p>As of lately we have had a few users where they compose a message in outlook and when they hit send the message goes to their outbox to send but it remains there and nothing you do will release it. However when the user logs into Outlook Web Access the message sends perfectly fine. This immediately indicates that the issue is client side in Outlook.</p>
+<p>I must have spent ages trying to get Outlook to send but eventually a colleague of mine find a setting deep within Outlook which fixed the issue of emails not being sent and stuck in the outbox. The setting is as follows:</p>
+<p>Outlook -> Tools -> Options -> Preferences (Tab) -> Email Options (Button) -> Advanced Email Options&#8230; (Button)</p>
+<p>Then when there make sue that the follow tick box is un-checked: &#8220;In folders other than the Inbox, save replies with original message&#8221;.</p>
+<p>Not sure what this does but when we un-tick it mail flow starts working again.</p>
+]]></content>
+			<link rel="replies" type="text/html" href="http://l3rady.com/blog/2009/09/18/microsoft-exchangeoutlook-mail-wont-leave-outbox-wont-send/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=microsoft-exchangeoutlook-mail-wont-leave-outbox-wont-send#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://l3rady.com/blog/2009/09/18/microsoft-exchangeoutlook-mail-wont-leave-outbox-wont-send/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+	</feed>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 667/689 objects using disk
+
+ Served from: l3rady.com @ 2015-12-30 23:29:22 by W3 Total Cache -->

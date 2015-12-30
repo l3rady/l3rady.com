@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="distribution" content="global"/>
+<meta name="robots" content="follow, all"/>
+<meta name="language" content="en"/>
+<title>
+Brady &raquo; JavaScript</title>
+<meta name="generator" content="WordPress 3.9.9"/>
+ 
+<link rel="shortcut icon" href="http://l3rady.com/blog/category/code-and-snippets/javascript/wp-content/favicon.ico" type="image/x-icon"/>
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="../../../../feed/rss/index.html"/>
+<link rel="alternate" type="text/xml" title="RSS .92" href="../../../../feed/rss/index.html"/>
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="../../../../feed/atom/index.html"/>
+<link rel="pingback" href="../../../../xmlrpc.php"/>
+<link rel='archives' title='March 2011' href='../../../2011/03/index.html'/>
+<link rel='archives' title='January 2011' href='../../../2011/01/index.html'/>
+<link rel='archives' title='October 2010' href='../../../2010/10/index.html'/>
+<link rel='archives' title='September 2010' href='../../../2010/09/index.html'/>
+<link rel='archives' title='October 2009' href='../../../2009/10/index.html'/>
+<link rel='archives' title='September 2009' href='../../../2009/09/index.html'/>
+<link rel='archives' title='February 2009' href='../../../2009/02/index.html'/>
+<link rel='archives' title='October 2008' href='../../../2008/10/index.html'/>
+<link rel='archives' title='September 2008' href='../../../2008/09/index.html'/>
+<link rel='archives' title='August 2008' href='../../../2008/08/index.html'/>
+<link rel='archives' title='June 2008' href='../../../2008/06/index.html'/>
+<link rel='archives' title='May 2008' href='../../../2008/05/index.html'/>
+<link rel='archives' title='February 2008' href='../../../2008/02/index.html'/>
+<script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.5 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-25211555-1']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+<link rel="alternate" type="application/rss+xml" title="Brady &raquo; JavaScript Category Feed" href="feed/index.html"/>
+<link rel='stylesheet' id='mt-shcore-style-css' href='../../../../wp-content/plugins/syntax-highlighter-mt/styles/shCore.css%3Fver=2.2.4.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='mt-theme-style-css' href='../../../../wp-content/plugins/syntax-highlighter-mt/styles/shThemeDefault.css%3Fver=2.2.4.css' type='text/css' media='all'/>
+<script type='text/javascript' src='../../../../wp-content/plugins/syntax-highlighter-mt/scripts/shCore.js%3Fver=2.2.4'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/syntax-highlighter-mt/scripts/shAutoloader.js%3Fver=2.2.4'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc.php%3Frsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml"/>
+<meta name="generator" content="WordPress 3.9.9"/>
+<link rel="StyleSheet" href="../../../../wp-content/themes/alphaready/style/resetCSS.css" type="text/css"/>
+<link rel="StyleSheet" href="../../../../wp-content/themes/alphaready/style/alpha.css" type="text/css"/>
+<!--[if lte IE 7.0]><link type="text/css" rel="stylesheet" href="/wp-content/themes/alphaready/style/alphaie7.css" /><![endif]-->
+<!--[if lte IE 6.0]><link type="text/css" rel="stylesheet" href="/wp-content/themes/alphaready/style/alphaie6.css" /><![endif]-->
+</head>
+<body><script type="text/javascript">
+//<![CDATA[
+try{(function(a){var b="http://",c="l3rady.com",d="/cdn-cgi/cl/",e="img.gif",f=new a;f.src=[b,c,d,e].join("")})(Image)}catch(e){}
+//]]>
+</script>
+<div id="container">
+<a href="../../../../index.html"><img src="../../../../wp-content/themes/alphaready/images/headerlogo.jpg" alt="Brady" title="Brady" border="0"/></a>
+<div id="header-container">
+<div id="slogan"><img src="../../../../wp-content/themes/alphaready/images/slogan.png" alt="A moan, a groan, my life story and how me, a technically minded person just can&#039;t seem to fit in with anybody." title="A moan, a groan, my life story and how me, a technically minded person just can&#039;t seem to fit in with anybody."/></div>
+<div id="nav-container">
+<ul id="navigation">
+<li class='home' id='selected'><a href="../../../../index.html">HOME</a></li>
+<li class='about'><a href="../../../../about-me.html">ABOUT ME</a></li>
+<li class='webmail'><a href="http://webmail.alphaready.com">WEBMAIL</a></li>
+<li class='sms'><a href="http://sms.alphaready.com">SMS GATEWAY</a></li>
+<li class='proxy'><a href="http://proxy.alphaready.com">PROXY</a></li>
+</ul>
+<a href="../../../../cigarette.php.html"> </a>
+</div>
+</div>
+<div id="content"> <div id="sidebar">
+<ul id="ulside">
+<li><h2 id="side01">ARCHIVES</h2>
+<ul>
+<li><a href='../../../2011/03/index.html'>March 2011</a></li>
+<li><a href='../../../2011/01/index.html'>January 2011</a></li>
+<li><a href='../../../2010/10/index.html'>October 2010</a></li>
+<li><a href='../../../2010/09/index.html'>September 2010</a></li>
+<li><a href='../../../2009/10/index.html'>October 2009</a></li>
+<li><a href='../../../2009/09/index.html'>September 2009</a></li>
+<li><a href='../../../2009/02/index.html'>February 2009</a></li>
+<li><a href='../../../2008/10/index.html'>October 2008</a></li>
+<li><a href='../../../2008/09/index.html'>September 2008</a></li>
+<li><a href='../../../2008/08/index.html'>August 2008</a></li>
+<li><a href='../../../2008/06/index.html'>June 2008</a></li>
+<li><a href='../../../2008/05/index.html'>May 2008</a></li>
+<li><a href='../../../2008/02/index.html'>February 2008</a></li>
+</ul>
+</li>
+<li><h2 id="side02">CATEGORIES</h2>
+<ul>
+<li class="cat-item cat-item-8 current-cat-parent"><a href="../index.html" title="View all posts filed under Code and Snippets">Code and Snippets</a> (14)
+<ul class='children'>
+<li class="cat-item cat-item-18"><a href="../css/index.html" title="View all posts filed under CSS">CSS</a> (1)
+</li>
+<li class="cat-item cat-item-10"><a href="../html/index.html" title="View all posts filed under HTML">HTML</a> (3)
+</li>
+<li class="cat-item cat-item-11 current-cat"><a href="index.html" title="View all posts filed under JavaScript">JavaScript</a> (3)
+</li>
+<li class="cat-item cat-item-9"><a href="../php/index.html" title="View all posts filed under PHP">PHP</a> (8)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-16"><a href="../../how-to/index.html" title="View all posts filed under How to">How to</a> (1)
+</li>
+<li class="cat-item cat-item-6"><a href="../../inner-geek/index.html" title="Don&#039;t enter here if you want some lite reading. This place is purly my inner geek talking.">Inner Geek</a> (4)
+</li>
+<li class="cat-item cat-item-14"><a href="../../software/index.html" title="View all posts filed under Software">Software</a> (2)
+</li>
+</ul>
+</li>
+<li><h2 id="side03">META</h2>
+<ul>
+<li><a href="http://feeds.feedburner.com/l3rady/WyQw" title="Syndicate this site using RSS"><abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="../../../../wp-login.php.html">Log in</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="arc"><h2>Archive for the 'JavaScript' Category</h2></div>
+<div id="main-content">
+<div class="entry">
+ 
+<h3 class="entrytitle" id="post-477"><a href="../../../../index.html%3Fp=477.html" rel="bookmark">Google Maps API Javascript V3 &#8211; Place Km/Mile radius/circle around point</a></h3>
+<div class="entrymeta">September 14th 2010 | Posted to <a href="index.html" title="View all posts in JavaScript" rel="category tag">JavaScript</a> </div>
+<div class="entrybody"><p>So Google has released V3 of their Google Maps API and it appears that they have stripped out a number of useful functions that I&#8217;ve found myself using in V2. Apparently these functions have been stripped out to make a more lightweight and compact API for better performance for mobile devices. This is great but now you have to write your own function that Google has taken out.</p>
+<p>So would you like to draw a radius around on a point on a Google map? Well I do and I managed it in the V2 API using a Google function called distanceFrom() and some custom code but now that function has been stripped out in v3. Anyway I&#8217;ve rewritten my code to do this in the V3 API. Take a look: <a href="http://pastebin.com/DnLqzMZx" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://pastebin.com']);" target="_blank">http://pastebin.com/DnLqzMZx</a></p>
+<p>This requires the Google Maps API and also the <a href="http://www.movable-type.co.uk/scripts/latlong.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.movable-type.co.uk']);" target="_blank">latlong JS script from Movable Type</a>. To use simply call the function drawCircle() sending your Google longitude and latitude cords and the mile radius. If you want to use Km then comment out or delete the bit of code highlighted.</p>
+<p>Oh and you can send some other variables too if you don’t like the default colours and settings.</p>
+<p>Example usage: <a href="../../../../wp-content/uploads/2010/09/mapexample.html" target="_blank">http://l3rady.com/wp-content/uploads/2010/09/mapexample.html</a></p>
+<p class="comments_link">
+<a href="../../../../index.html%3Fp=477.html#respond" title="Comment on Google Maps API Javascript V3 &#8211; Place Km/Mile radius/circle around point"><span class="dsq-postid" rel="477 http://l3rady.com/?p=477"><img src="../../../../wp-content/themes/alphaready/images/comments.gif" title="comments" alt="*"/> Comments(0)</span></a> </p>
+</div>
+ 
+</div>
+<div class="entry">
+ 
+<h3 class="entrytitle" id="post-352"><a href="../../../../index.html%3Fp=352.html" rel="bookmark">Javascript Same Height Div&#8217;s Update</a></h3>
+<div class="entrymeta">August 14th 2008 | Posted to <a href="index.html" title="View all posts in JavaScript" rel="category tag">JavaScript</a> </div>
+<div class="entrybody"><p>A while back I posted a way of making same height div’s but came across an issue when padding was involved. Well I’ve modified my code to take into account padding. Now the obvious thing to do would be to be to check padding on a div and subtract it from the height, but it’s not that easy. You would have to check three things: padding, paddingTop and paddingBottom. For some reason when I was checking padding I couldn’t get a value from JavaScript, this had me really stumped but after a nights sleep I came up with a better and more simpler way of sorting the padding issue. This is to let the code run and let it re-height the div’s and let the padding mess things up then run the same thing again and check for height differences from last time we checked. Oooohhh look the height has gone up 10px from last time thanks to a padding of 5px on the div. Now we know there is 10px of padding lets remove it. Sorted!</p>
+<p>JavaScript Code:<br/>
+[js]<br/>
+function sameHeight(divs) // Bring in an array of your divs<br/>
+{<br/>
+var highest = 0;<br/>
+var heighttu = 0;<br/>
+for(i = 0; i < divs.length; i++) // Loop through the divs
+{
+// Check to see if this div is the highest?
+if(document.getElementById(divs[i]).offsetHeight > highest)<br />
+{<br />
+// Yes its the highest so set the highest value to this div&#8217;s height<br />
+highest = document.getElementById(divs[i]).offsetHeight;<br />
+}<br />
+}<br />
+// Loop through divs and set their hieght all the same<br />
+for(i = 0; i < divs.length; i++)
+{
+document.getElementById(divs[i]).style.height = highest+"px";
+}
+// now get offset hieght again and we may found we have gone higher this is because of padding
+if(document.getElementById(divs[0]).offsetHeight > highest)<br />
+{<br />
+// correct the height<br />
+highest = highest &#8211; (document.getElementById(divs[0]).offsetHeight &#8211; highest);<br />
+// Correct divs<br />
+for(i = 0; i < divs.length; i++)
+{
+document.getElementById(divs[i]).style.height = highest+&#8221;px&#8221;;
+}
+}
+}[/js]
+</p>
+        <p class="comments_link">
+        <a href="../../../../index.html%3Fp=352.html#respond" title="Comment on Javascript Same Height Div&#8217;s Update"><span class="dsq-postid" rel="352 http://l3rady.com/?p=352"><img src="../../../../wp-content/themes/alphaready/images/comments.gif"  title="comments" alt="*" /> Comments(0)</span></a>        </p>
+      </div>
+      <!--<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://l3rady.com/blog/2008/08/14/javascript-same-height-divs-update/"
+    dc:identifier="http://l3rady.com/blog/2008/08/14/javascript-same-height-divs-update/"
+    dc:title="Javascript Same Height Div&#8217;s Update"
+    trackback:ping="http://l3rady.com/blog/2008/08/14/javascript-same-height-divs-update/trackback/" />
+</rdf:RDF>-->
+    </div>
+      <div class="entry">
+      <!--<h2 class="entrydate">5 June 2008</h2>-->
+      <h3 class="entrytitle" id="post-90"><a href="../../../../index.html%3Fp=90.html" rel="bookmark">Javascript Same Height Div&#8217;s</a></h3>
+      <div class="entrymeta">June 05th 2008 | Posted to <a href="index.html" title="View all posts in JavaScript" rel="category tag">JavaScript</a> </div>
+      <div class="entrybody"><p>Recently I had to make some divs the same height. Usually I would just pad the bottom of a div with page breaks but I couldn’t do that this time round as the page content is dynamic and the height of the divs could change.</p>
+<p>First thing I did was look online for answers and sure enough there were solutions but looking at them they seemed over complicated so I decided to write my own solution.</p>
+<p>Javascript Code:</p>
+<p>Update at: <a href="../../../../2008/08/14/javascript-same-height-divs-update/index.html" >http://l3rady.com/2008/08/14/javascript-same-height-divs-update/</a></p>
+<p>Simply pass an array of your divs to the function. Easy peasy&#8230;.</p>
+<p>Just an extra word of warning&#8230; Be aware of using padding on the blocks you pass to this function. If the paddings are different in each block then they may not end up being the same height. Although you could modify the function to check for the use of padding and alter the heights accordingly.</p>
+        <p class="comments_link">
+        <a href="../../../../index.html%3Fp=90.html#respond" title="Comment on Javascript Same Height Div&#8217;s"><span class="dsq-postid" rel="90 http://l3rady.com/?p=90"><img src="../../../../wp-content/themes/alphaready/images/comments.gif"  title="comments" alt="*" /> Comments(0)</span></a>        </p>
+      </div>
+      <!--<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://l3rady.com/blog/2008/06/05/javascript-same-height-divs/"
+    dc:identifier="http://l3rady.com/blog/2008/06/05/javascript-same-height-divs/"
+    dc:title="Javascript Same Height Div&#8217;s"
+    trackback:ping="http://l3rady.com/blog/2008/06/05/javascript-same-height-divs/trackback/" />
+</rdf:RDF>-->
+    </div>
+    <div class="entryother"></div>
+  </div>
+  <br style="clear:right" />
+<!-- begin footer -->
+  </div>
+</div>
+<div id="footer">
+  <p><a href="http://www.alphaready.com"><img src="../../../../wp-content/themes/alphaready/images/ARfooter.jpg" alt="Alpha Ready" title="AlphavReady" border="0" /></a></p>
+  <p>Copyright &copy; 2008-2015 <a href="http://www.alphaready.com">Alpha Ready Ltd</a>. All rights reserved.</p>
+</div>
+    <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'l3rady';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) url = url[0];
+                    else url = url[1]
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var MTBrushParams = {"baseUrl":"http:\/\/l3rady.com\/wp-content\/plugins\/syntax-highlighter-mt"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-content/plugins/syntax-highlighter-mt/brushTypes.js%3Fver=2.2.4'></script>
+</body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 523/527 objects using disk
+
+ Served from: l3rady.com @ 2015-12-30 23:29:32 by W3 Total Cache -->

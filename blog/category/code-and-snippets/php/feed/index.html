@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Brady &#187; PHP</title>
+	<atom:link href="http://l3rady.com/blog/category/code-and-snippets/php/feed/" rel="self" type="application/rss+xml" />
+	<link>http://l3rady.com</link>
+	<description>A moan, a groan, my life story and how me, a technically minded person just can&#039;t seem to fit in with anybody.</description>
+	<lastBuildDate>Mon, 10 Sep 2012 14:35:55 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.9.9</generator>
+	<item>
+		<title>Remove/edit WordPress admin footer links and version number</title>
+		<link>http://l3rady.com/blog/2011/03/24/removeedit-wordpress-admin-footer-links-and-version-number/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=removeedit-wordpress-admin-footer-links-and-version-number</link>
+		<comments>http://l3rady.com/blog/2011/03/24/removeedit-wordpress-admin-footer-links-and-version-number/#comments</comments>
+		<pubDate>Thu, 24 Mar 2011 11:38:46 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=530</guid>
+		<description><![CDATA[function change_footer_admin () {return '&#38;nbsp;';} add_filter('admin_footer_text', 'change_footer_admin', 9999); function change_footer_version() {return ' ';} add_filter( 'update_footer', 'change_footer_version', 9999); Place the above code in your themes function file. The above code allows you to edit the admin footer version number and text links. Just alter the html in the return of each function. I recommend removing the version [&#8230;]]]></description>
+				<content:encoded><![CDATA[<pre class="brush:php">function change_footer_admin () {return '&amp;nbsp;';}
+add_filter('admin_footer_text', 'change_footer_admin', 9999);
+function change_footer_version() {return ' ';}
+add_filter( 'update_footer', 'change_footer_version', 9999);</pre>
+<p>Place the above code in your themes function file. The above code allows you to edit the admin footer version number and text links. Just alter the html in the return of each function. I recommend removing the version number for security reasons. There are a lot of tutorials out there that tell you how to remove the generator tag from your WordPress header to hide the version number put they forget if a user registers they can see the version number in the admin footer page. If you build WordPress installations for your clients this footer area is good for displaying your own support links etc.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2011/03/24/removeedit-wordpress-admin-footer-links-and-version-number/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>WordPress &#8211; Show images attached to post or page in order</title>
+		<link>http://l3rady.com/blog/2010/10/25/wordpress-show-images-attached-to-post-or-page-in-order/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=wordpress-show-images-attached-to-post-or-page-in-order</link>
+		<comments>http://l3rady.com/blog/2010/10/25/wordpress-show-images-attached-to-post-or-page-in-order/#comments</comments>
+		<pubDate>Mon, 25 Oct 2010 16:32:32 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=499</guid>
+		<description><![CDATA[I&#8217;m currently building a website where a custom post type needs to show a gallery of images per post. Below image is what I was after: To do this I would upload the images when creating the post so that the images would be attached to the post, or in other words the attachments where [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>I&#8217;m currently building a website where a custom post type needs to show a gallery of images per post. Below image is what I was after:</p>
+<p><a href="http://l3rady.com/wp-content/uploads/2010/10/property-gallery.jpg"><img src="http://l3rady.com/wp-content/uploads/2010/10/property-gallery.jpg" alt="" title="property-gallery" width="535" height="256" class="alignnone size-full wp-image-500" /></a></p>
+<p>To do this I would upload the images when creating the post so that the images would be attached to the post, or in other words the attachments where child posts of this post I was creating. I found some code that grabs the attachments but the code didn&#8217;t retrieve the results by the order I have specified in the upload manager when uploading the image. To get the images in order I had to write a little more code to what I had found.</p>
+<p>Anyway here is the finished code <a href="http://pastebin.com/wEvW0WHZ" target="_blank">http://pastebin.com/wEvW0WHZ</a>. It&#8217;s tailored to my needs but here you can see how the image attachments are being pulled and then how im sorting the results to go in the correct order. Hope it is some use to someone.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2010/10/25/wordpress-show-images-attached-to-post-or-page-in-order/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>PHP Send Email With High Importance Set</title>
+		<link>http://l3rady.com/blog/2010/09/29/php-send-email-with-high-importance-set/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=php-send-email-with-high-importance-set</link>
+		<comments>http://l3rady.com/blog/2010/09/29/php-send-email-with-high-importance-set/#comments</comments>
+		<pubDate>Wed, 29 Sep 2010 16:50:25 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=481</guid>
+		<description><![CDATA[Just posting this for reference really. You need to add some extra headers to your PHP send mail script to send the email with high importance. This will show a red exclamation mark on the recipitents recieved mail if their mail client supports this feature. http://pastebin.com/UamEcsu7]]></description>
+				<content:encoded><![CDATA[<p>Just posting this for reference really. You need to add some extra headers to your PHP send mail script to send the email with high importance. This will show a red exclamation mark on the recipitents recieved mail if their mail client supports this feature.</p>
+<p><a href="http://pastebin.com/UamEcsu7" target="_blank">http://pastebin.com/UamEcsu7</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2010/09/29/php-send-email-with-high-importance-set/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>PHP &#8211; Get users SID from Active Directory via LDAP (objectsid)</title>
+		<link>http://l3rady.com/blog/2009/09/15/php-get-users-sid-from-active-directory-via-ldap-objectsid/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=php-get-users-sid-from-active-directory-via-ldap-objectsid</link>
+		<comments>http://l3rady.com/blog/2009/09/15/php-get-users-sid-from-active-directory-via-ldap-objectsid/#comments</comments>
+		<pubDate>Tue, 15 Sep 2009 10:39:50 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=435</guid>
+		<description><![CDATA[Have you ever needed to read an AD users SID so you can use it as the unique identifier it is? Well I did but when I read out objectsid from AD for a user I found a load of weird symbols. It turned out that the data outputted was binary data. So after some [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Have you ever needed to read an AD users SID so you can use it as the unique identifier it is?</p>
+<p>Well I did but when I read out objectsid from AD for a user I found a load of weird symbols. It turned out that the data outputted was binary data. So after some digging around to see how to translate the binary data to a human readable SID like S-1-5-21-823795046-756116320-56781596-16683 I got to work to write a PHP script that could do just that.</p>
+<p>This is what I came up with:</p>
+<p>[PHP]$suffix =&#8221;@sub.mydomain.co.uk&#8221;;<br />
+$base_dn = &#8220;dc=sub,dc=mydomain,dc=co,dc=uk&#8221;;<br />
+$server = &#8220;127.0.0.1&#8243;;</p>
+<p>$USERNAME = &#8220;username&#8221;;<br />
+$PASSWORD = &#8220;password&#8221;;</p>
+<p>$USERNAMETOSEARCH = &#8220;user to get sid&#8221;;</p>
+<p>$ds = ldap_connect($server);<br />
+ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);<br />
+ldap_set_option($ds, LDAP_OPT_REFERRALS, 0);<br />
+$r = ldap_bind($ds, $USERNAME.$suffix, $PASSWORD);<br />
+$sr = ldap_search($ds, $base_dn, &#8220;(samaccountname=&#8221;.$USERNAMETOSEARCH.&#8221;)&#8221;);<br />
+$entries = ldap_get_entries($ds, $sr);</p>
+<p>// All SID&#8217;s begin with S-<br />
+$sid = &#8220;S-&#8221;;<br />
+// Convert Bin to Hex and split into byte chunks<br />
+$sidinhex = str_split(bin2hex($entries[0]['objectsid'][0]), 2);<br />
+// Byte 0 = Revision Level<br />
+$sid = $sid.hexdec($sidinhex[0]).&#8221;-&#8221;;<br />
+// Byte 1-7 = 48 Bit Authority<br />
+$sid = $sid.hexdec($sidinhex[6].$sidinhex[5].$sidinhex[4].$sidinhex[3].$sidinhex[2].$sidinhex[1]);<br />
+// Byte 8 count of sub authorities &#8211; Get number of sub-authorities<br />
+$subauths = hexdec($sidinhex[7]);<br />
+//Loop through Sub Authorities<br />
+for($i = 0; $i < $subauths; $i++) {
+	$start = 8 + (4 * $i);
+	// X amount of 32Bit (4 Byte) Sub Authorities
+	$sid = $sid.&#8221;-&#8221;.hexdec($sidinhex[$start+3].$sidinhex[$start+2].$sidinhex[$start+1].$sidinhex[$start]);
+}
+
+echo $sid;[/PHP]
+
+Now this is written in PHP but I&#8217;m sure this code can be pretty much be translated to any other language.
+</p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2009/09/15/php-get-users-sid-from-active-directory-via-ldap-objectsid/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>PHP &#8211; Active Directory &#8211; Reading UserAccountControl</title>
+		<link>http://l3rady.com/blog/2009/09/14/php-active-directory-reading-useraccountcontrol/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=php-active-directory-reading-useraccountcontrol</link>
+		<comments>http://l3rady.com/blog/2009/09/14/php-active-directory-reading-useraccountcontrol/#comments</comments>
+		<pubDate>Mon, 14 Sep 2009 13:33:16 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=432</guid>
+		<description><![CDATA[At the moment I&#8217;m doing a lot of work with Microsoft Active Directory and PHP. I&#8217;m building a few tools in PHP which reads data out of AD. Now one of the things I wanted to read out was to see if the account was locked or if its password never expired. I couldn&#8217;t find [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>At the moment I&#8217;m doing a lot of work with Microsoft Active Directory and PHP. I&#8217;m building a few tools in PHP which reads data out of AD.</p>
+<p>Now one of the things I wanted to read out was to see if the account was locked or if its password never expired. I couldn&#8217;t find these entries in AD but after searching those entries are stored in &#8220;useraccountcontrol&#8221;. But when I looked it was just a number. How does that number tell you if the account is locked?</p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms680832(VS.85).aspx">http://msdn.microsoft.com/en-us/library/ms680832(VS.85).aspx</a></p>
+<p>On the above link is how that number is generated and once I understood that I got to work on writing a PHP script which translates that number into something more usable. Once I wrote the script I put it up on the Hot Scripts Forum to see if the code I wrote could be improved on and optimised. Here is what they came back with:</p>
+<p>[PHP]<br />
+$userAccountArray = array(<br />
+  &#8216;ADS_UF_TRUSTED_TO_AUTHENTICATE_FOR_DELEGATION&#8217; => 0,<br />
+  &#8216;ADS_UF_PASSWORD_EXPIRED&#8217; => 0,<br />
+  &#8216;ADS_UF_DONT_REQUIRE_PREAUTH&#8217; => 0,<br />
+  &#8216;ADS_UF_USE_DES_KEY_ONLY&#8217; => 0,<br />
+  &#8216;ADS_UF_NOT_DELEGATED&#8217; => 0,<br />
+  &#8216;ADS_UF_TRUSTED_FOR_DELEGATION&#8217; => 0,<br />
+  &#8216;ADS_UF_SMARTCARD_REQUIRED&#8217; => 0,<br />
+  &#8216;ADS_UF_MNS_LOGON_ACCOUNT&#8217; => 0,<br />
+  &#8216;ADS_UF_DONT_EXPIRE_PASSWD&#8217; => 0,<br />
+  &#8216;NOT_USED_8000&#8242; => 0,<br />
+  &#8216;NOT_USED_4000&#8242; => 0,<br />
+  &#8216;ADS_UF_SERVER_TRUST_ACCOUNT&#8217; => 0,<br />
+  &#8216;ADS_UF_WORKSTATION_TRUST_ACCOUNT&#8217; => 0,<br />
+  &#8216;ADS_UF_INTERDOMAIN_TRUST_ACCOUNT&#8217; => 0,<br />
+  &#8216;ADS_UF_NORMAL_ACCOUNT&#8217; => 0,<br />
+  &#8216;ADS_UF_TEMP_DUPLICATE_ACCOUNT&#8217; => 0,<br />
+  &#8216;ADS_UF_ENCRYPTED_TEXT_PASSWORD_ALLOWED&#8217; => 0,<br />
+  &#8216;ADS_UF_PASSWD_CANT_CHANGE&#8217; => 0,<br />
+  &#8216;ADS_UF_PASSWD_NOTREQD&#8217; => 0,<br />
+  &#8216;ADS_UF_LOCKOUT&#8217; => 0,<br />
+  &#8216;ADS_UF_HOMEDIR_REQUIRED&#8217; => 0,<br />
+  &#8216;NOT_USED_4&#8242; => 0,<br />
+  &#8216;ADS_UF_ACCOUNTDISABLE&#8217; => 0,<br />
+  &#8216;ADS_UF_SCRIPT&#8217; => 0<br />
+);</p>
+<p>function ADUserAccountControl($val) {<br />
+	global $userAccountArray;<br />
+	$x = pow(2, count($userAccountArray) &#8211; 1);<br />
+	foreach($userAccountArray as $k => $v) {<br />
+		if(($val &#8211; $x) >= 0){<br />
+			$userAccountArray[$k] = 1;<br />
+			$val -= $x;<br />
+		} else {<br />
+			$userAccountArray[$k] = 0;<br />
+		}<br />
+		$x = $x / 2;<br />
+	}<br />
+}<br />
+[/PHP]</p>
+<p>Simply pass your useraccountcontrol value to the function and read the results out of the array.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2009/09/14/php-active-directory-reading-useraccountcontrol/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Getting Windows HDD usage with PHP and SNMP</title>
+		<link>http://l3rady.com/blog/2008/05/28/getting-windows-hdd-usage-with-php-and-snmp/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=getting-windows-hdd-usage-with-php-and-snmp</link>
+		<comments>http://l3rady.com/blog/2008/05/28/getting-windows-hdd-usage-with-php-and-snmp/#comments</comments>
+		<pubDate>Wed, 28 May 2008 07:17:52 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=89</guid>
+		<description><![CDATA[At work a couple of months back I was faced with a problem that many of our servers would run out of hard drive space without us knowing and that would cause the server to hang and/or stop responding. So I did a bit of research and came across. This little utilility would run on [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>At work a couple of months back I was faced with a problem that many of our servers would run out of hard drive space without us knowing and that would cause the server to hang and/or stop responding. So I did a bit of research and came across. This little utilility would run on the server in command line and tell you what drives were available and some info of the drives like space used and available. Well with this I would echo out the data to a text file and send that across to a common holding ground. Then from there get my web server to constantly scan this folder for new logs. This method worked but it had its issues.</p>
+<p>Well yesterday at work I was playing around with SNMP and after finding a site with <a href="http://snmpboy.msft.net/pub/w2kmibs/">W2K MIBS</a> I found lots of info you can pull from the server. Now I was already familiar with SNMP in PHP thanks to their <a href="http://uk.php.net/snmp">documentation</a> on their site. So using their snmpwalk function I was able to pull the relevant data to get HDD usage info.</p>
+<p>[php]<br />
+$names = snmpwalk($row['ip'], &#8220;public&#8221;, &#8216;.1.3.6.1.2.1.25.2.3.1.3&#8242;);<br />
+$used = snmpwalk($row['ip'], &#8220;public&#8221;, &#8216;.1.3.6.1.2.1.25.2.3.1.6&#8242;);<br />
+$total = snmpwalk($row['ip'], &#8220;public&#8221;, &#8216;.1.3.6.1.2.1.25.2.3.1.5&#8242;);<br />
+$alloc = snmpwalk($row['ip'], &#8220;public&#8221;, &#8216;.1.3.6.1.2.1.25.2.3.1.4&#8242;);<br />
+[/php]</p>
+<p>Now that would give me an array of drive names, space used on those drives, total space available on those drives and the allocation units. Now the allocation units I didn&#8217;t realize I needed as I thought the numbers given in used and total were just measured in bytes but they aren&#8217;t. The numbers in used and total are how many blocks of allocation size (if that makes sense). So to get the true byte value from used and total you need to multiply them by the allocation size number.</p>
+<p><em>25599569 * 4096 = 104855834624B = 97.65GB</em></p>
+<p>So there you have it. Now you know how to get HDD usage from your server using PHP and SNMP.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2008/05/28/getting-windows-hdd-usage-with-php-and-snmp/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>PHP File Upload Progress Bar Part 2</title>
+		<link>http://l3rady.com/blog/2008/02/07/php-file-upload-progress-bar-part-2/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=php-file-upload-progress-bar-part-2</link>
+		<comments>http://l3rady.com/blog/2008/02/07/php-file-upload-progress-bar-part-2/#comments</comments>
+		<pubDate>Thu, 07 Feb 2008 13:30:38 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/2008/02/07/php-file-upload-progress-bar-part-2/</guid>
+		<description><![CDATA[After further investigation PHP 5.2.0 now allows you to use the APC (Alternative PHP Cache) addition with the ability to track the progress of uploads. Within windows it is as simply adding the dll extension to your php.ini and putting some configs there to. With Linux I&#8217;m not too sure how you add this extension as [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>After further investigation PHP 5.2.0 now allows you to use the APC (Alternative PHP Cache) addition with the ability to track the progress of uploads. Within windows it is as simply adding the dll extension to your php.ini and putting some configs there to. With Linux I&#8217;m not too sure how you add this extension as I don&#8217;t know Linux well. But anyway below is some nice and easy documentation on this.</p>
+<p><a href="http://www.ibm.com/developerworks/library/os-php-v525/index.html">PHP File Upload Progress Bar</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2008/02/07/php-file-upload-progress-bar-part-2/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>PHP File Upload Progress Bar</title>
+		<link>http://l3rady.com/blog/2008/02/05/php-file-upload-progress-bar/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=php-file-upload-progress-bar</link>
+		<comments>http://l3rady.com/blog/2008/02/05/php-file-upload-progress-bar/#comments</comments>
+		<pubDate>Tue, 05 Feb 2008 21:34:22 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/2008/02/05/php-file-upload-progress-bar/</guid>
+		<description><![CDATA[As you may be aware in php it doesn’t have the functionality to report back the status of file uploads. For example upload percent complete, speed of upload and estimated time of completion. To be able to provide a progress bar the easiest way would be to use a perl script to do the uploading [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>As you may be aware in php it doesn’t have the functionality to report back the status of file uploads. For example upload percent complete, speed of upload and estimated time of completion. To be able to provide a progress bar the easiest way would be to use a perl script to do the uploading for you as perl has this functionality. Now I build a file uploader for the public and I looked at providing a perl uploader but because I know very little about the language of perl I couldn’t get any examples to work for me, but the ones that did work needed some server side changes. These server side changes would be no good for most of my downloader’s as many of them don’t have root access to their server.</p>
+<p>There is another solution out there but once again it involves making server side changes which hacks php and adds the additional functions to track the upload progress of a file.</p>
+<p>The above hack for PHP can be found at http://pecl.php.net/package/uploadprogress. There isn’t much documentation out there for it but if you do a Google search you will find one or two examples.</p>
+<p>The above hack I’m thinking about putting it in my module so that those that have the modified php will be able to run my uploader with the progress bar but those without would not get the upload progress bar. The thing in to build my module to use this hack I need a server that is running the hacked version of php. Thing is I’m stuck with a shared hosting account and I don’t have access to modify php. So if there is anyone out there that can lend me some space for a short time and is running the above hack please contact me so I can’t continue building my file uploader script</p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2008/02/05/php-file-upload-progress-bar/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 443/461 objects using disk
+
+ Served from: l3rady.com @ 2015-12-30 23:30:03 by W3 Total Cache -->

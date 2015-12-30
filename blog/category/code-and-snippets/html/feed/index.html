@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Brady &#187; HTML</title>
+	<atom:link href="http://l3rady.com/blog/category/code-and-snippets/html/feed/" rel="self" type="application/rss+xml" />
+	<link>http://l3rady.com</link>
+	<description>A moan, a groan, my life story and how me, a technically minded person just can&#039;t seem to fit in with anybody.</description>
+	<lastBuildDate>Mon, 10 Sep 2012 14:35:55 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.9.9</generator>
+	<item>
+		<title>How to stop Skype replacing telephone numbers on your web design</title>
+		<link>http://l3rady.com/blog/2011/01/21/how-to-stop-skype-replacing-telephone-numbers-on-your-web-design/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-to-stop-skype-replacing-telephone-numbers-on-your-web-design</link>
+		<comments>http://l3rady.com/blog/2011/01/21/how-to-stop-skype-replacing-telephone-numbers-on-your-web-design/#comments</comments>
+		<pubDate>Fri, 21 Jan 2011 15:07:15 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[HTML]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=523</guid>
+		<description><![CDATA[When a user installs Skype it auto installs some plugins to Internet Explorer and Firefox, that when it sees a telephone number on the webpage a user is viewing it will replace the number and surround it in its own formatting. Now a user can disable this function but as a web designer/developer you cannot [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>When a user installs Skype it auto installs some plugins to Internet Explorer and Firefox, that when it sees a telephone number on the webpage a user is viewing it will replace the number and surround it in its own formatting. Now a user can disable this function but as a web designer/developer you cannot guarantee that all your website visitors have it disabled. For those users that don’t have it disabled a nicely designed and placed telephone number in your design is replaced with an ugly and out-of-place number. Yuk! I did some searching and all the posts I could find only said how to disabled the plugin which I didn’t want. I want to disable the plugin or disable the effects of the plugin for all browsers viewing the site I was developing.</p>
+<p>I then came across this code:</p>
+<pre class="brush:html">&lt;meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" /&gt;</pre>
+<p>Put looks like Skype has updated and this code no longer works. For all my web design work I always work with a reset.css style sheet that is like my common settings for CSS that I use in all web development. Well I stumbled across some CSS you can use to hide the effects of the Skype plugin. Here is the nice bit of CSS code that has found its way into my reset.css style sheet:</p>
+<pre class="brush:css">/**** GET LOST SKYPE! ****/
+span.skype_pnh_container {display:none !important;}
+span.skype_pnh_print_container {display:inline !important;}</pre>
+<p>Hope it helps you out</p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2011/01/21/how-to-stop-skype-replacing-telephone-numbers-on-your-web-design/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>CSS/HTML &#8211; Margin goes/pushes out container block/div</title>
+		<link>http://l3rady.com/blog/2010/09/30/csshtml-margin-goespushes-out-container-blockdiv/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=csshtml-margin-goespushes-out-container-blockdiv</link>
+		<comments>http://l3rady.com/blog/2010/09/30/csshtml-margin-goespushes-out-container-blockdiv/#comments</comments>
+		<pubDate>Thu, 30 Sep 2010 15:22:05 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=488</guid>
+		<description><![CDATA[I recently encountered this issue: Where the margin on the H1 tag was overflowing into the container above and pushing down the H1 tag&#8217;s container. I couldnt figure out why. Here is an example: http://l3rady.com/wp-content/uploads/2010/09/marginout.html To my logic the green should be flush against the top and a 10px gap between the red and green. [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>I recently encountered this issue:</p>
+<p><img src="http://l3rady.com/wp-content/uploads/2010/09/marginout.png" alt="Margin Pushing Out" /></p>
+<p>Where the margin on the H1 tag was overflowing into the container above and pushing down the H1 tag&#8217;s container. I couldnt figure out why. Here is an example:</p>
+<p><a href="http://l3rady.com/wp-content/uploads/2010/09/marginout.html">http://l3rady.com/wp-content/uploads/2010/09/marginout.html</a></p>
+<p>To my logic the green should be flush against the top and a 10px gap between the red and green. After some digging around I found out the reason this is happening is due to the way <a href="http://www.w3.org/TR/CSS2/visuren.html#block-formatting">block formatting works</a>. To fix this just add overflow:hidden; to the H1 tag&#8217;s container. Fixed here:</p>
+<p><a href="http://l3rady.com/wp-content/uploads/2010/09/marginfixed.html">http://l3rady.com/wp-content/uploads/2010/09/marginfixed.html</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2010/09/30/csshtml-margin-goespushes-out-container-blockdiv/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>CSS Dotted/Dashed HR Style</title>
+		<link>http://l3rady.com/blog/2009/10/13/css-dotteddashed-hr-style/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=css-dotteddashed-hr-style</link>
+		<comments>http://l3rady.com/blog/2009/10/13/css-dotteddashed-hr-style/#comments</comments>
+		<pubDate>Tue, 13 Oct 2009 16:35:50 +0000</pubDate>
+		<dc:creator><![CDATA[Brady]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+
+		<guid isPermaLink="false">http://l3rady.com/?p=446</guid>
+		<description><![CDATA[Ever had problems styling an HR element to be dotted or dashed and look correct in all browsers? Well here is a simple solution for you: [CSS] hr.{ background-color:#fff; border:#000 1px dotted; border-style: none none dotted; color:#fff; } [/CSS]]]></description>
+				<content:encoded><![CDATA[<p>Ever had problems styling an HR element to be dotted or dashed and look correct in all browsers?</p>
+<p>Well here is a simple solution for you:</p>
+<p>[CSS]<br />
+hr.{<br />
+	background-color:#fff;<br />
+	border:#000 1px dotted;<br />
+	border-style: none none dotted;<br />
+	color:#fff;<br />
+}<br />
+[/CSS]</p>
+]]></content:encoded>
+			<wfw:commentRss>http://l3rady.com/blog/2009/10/13/css-dotteddashed-hr-style/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Object Caching 285/293 objects using disk
+
+ Served from: l3rady.com @ 2015-12-30 23:30:01 by W3 Total Cache -->
